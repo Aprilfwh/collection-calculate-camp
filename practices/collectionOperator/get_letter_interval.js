@@ -8,11 +8,14 @@ function get_letter_interval(number_a, number_b) {
   }
   var result=[];
   if(number_a<number_b){
-    result = letter.slice(number_a-1,number_b)
+    result = letter.slice(number_a-1,number_b);
   }
   else if(number_a>number_b){
     result = letter.slice(number_b-1,number_a);
     result.reverse();
+  }
+  else if(number_a===number_b){
+    result.push(letter[number_a-1])
   }
   return result;
 }
